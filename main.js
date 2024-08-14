@@ -17,5 +17,45 @@ const perguntas = [
             "",
             ""
         ]
+    },
+    {
+        enunciado: "Aos 15 anos você está fazendo um trabalho sobre a Mata Atlântica, e percebe que a situação piorou. Alguns",
+        alternativas: [
+            "",
+            ""
+        ]
+    },
+    {
+        enunciado: "Aos 15 anos você está fazendo um trabalho sobre a Mata Atlântica, e percebe que a situação piorou. Alguns",
+        alternativas: [
+            "",
+            ""
+        ]
+    },
+    {
+        enunciado: "Aos 15 anos você está fazendo um trabalho sobre a Mata Atlântica, e percebe que a situação piorou. Alguns",
+        alternativas: [
+            "",
+            ""
+        ]
     }
 ] 
+
+let atual = 0;
+let perguntaAtual;
+
+function mostraPergunta(){
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+    mostraAlternativas();
+}
+
+function mostraAlternativas(){
+    for(const alternativa of perguntaAtual.alternativa){
+        const botaoAlternativas = document.createElement("button")
+        botaoAlternativas.textContent = alternativa;
+        caixaAlternativas.appendChild(botaoAlternativa)
+    }
+}
+
+mostraPergunta();
